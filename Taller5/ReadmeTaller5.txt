@@ -1,0 +1,1 @@
+Vista de pantalla de inicio de sesion sin funcionalidad
