@@ -5,14 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/teal_200"
-    tools:context=".MainActivity">
+    tools:context=".LostAccount">
 
     <TextView
         android:id="@+id/login"
-        android:layout_width="158dp"
-        android:layout_height="117dp"
+        android:layout_width="220dp"
+        android:layout_height="122dp"
         android:gravity="center"
-        android:text="Login"
+        android:text="Restore Account"
         android:textColor="@color/black"
         android:textSize="35dp"
         android:textStyle="bold"
@@ -26,12 +26,12 @@
         android:layout_width="376dp"
         android:layout_height="116dp"
         android:layout_marginTop="196dp"
-        android:drawableLeft="@drawable/ic_baseline_person_outline_24"
+        android:drawableLeft="@drawable/email"
         android:drawablePadding="20dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:padding="20dp"
-        android:text="Username"
+        android:text="Confirm email"
         android:textColor="@color/black"
         android:textColorHint="@color/gold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -44,12 +44,12 @@
         android:layout_width="376dp"
         android:layout_height="117dp"
         android:layout_marginTop="8dp"
-        android:drawableLeft="@drawable/ic_baseline_lock_24"
+        android:drawableLeft="@drawable/ic_baseline_phone_android_24"
         android:drawablePadding="20dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:padding="20dp"
-        android:text="Password"
+        android:text="Confirm phone number"
         android:textColorHint="@color/gold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.514"
@@ -62,26 +62,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:backgroundTint="@color/teal_700"
-        android:text="Submit"
+        android:text="Restore"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
 
-    <TextView
-        android:id="@+id/forgot"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:text="Forgot your password?"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/submit"
-        app:layout_constraintVertical_bias="0.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
