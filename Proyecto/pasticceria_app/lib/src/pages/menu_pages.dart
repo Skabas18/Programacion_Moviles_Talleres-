@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pasticceria_app/src/pages/botton_navigation.dart';
+import 'package:pasticceria_app/src/pages/home_pages.dart';
 
 import '../routes/menu_routes.dart';
 
@@ -29,7 +30,7 @@ class _MenuPageState extends State<MenuPage> {
     return SafeArea(
         child: Scaffold(
       bottomNavigationBar: myButtonNavigation,
-      // body: MenuRoutes(index: index),
+      body: MenuRoutes(index: index),
     ));
   }
 }

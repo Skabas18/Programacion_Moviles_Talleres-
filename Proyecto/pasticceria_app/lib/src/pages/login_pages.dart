@@ -179,18 +179,6 @@ class _LoginPageState extends State<LoginPage> {
                       launch("https://web.facebook.com/Lapasticceriadilucre");
                     },
                   ),
-                  // Image.asset(
-                  //   "assets/images/instagram.gif",
-                  //   width: 40,
-                  // ),
-                  // Image.asset(
-                  //   "assets/images/whatsapp.gif",
-                  //   width: 40,
-                  // ),
-                  // Image.asset(
-                  //   "assets/images/facebook.gif",
-                  //   width: 40,
-                  // )
                 ],
               ),
             )

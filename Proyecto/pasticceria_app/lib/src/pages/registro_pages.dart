@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pasticceria_app/src/pages/Inicio_pages.dart';
 import 'package:pasticceria_app/src/pages/restorePassword_pages.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../widgets/back.dart';
 import 'menu_pages.dart';
@@ -169,18 +170,39 @@ class _RegistroPageState extends State<RegistroPage> {
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        Image.asset(
-                          "assets/images/instagram.gif",
-                          width: 40,
+                        IconButton(
+                          icon: Image.asset(
+                            "assets/images/instagram.gif",
+                          ),
+                          iconSize: 40,
+                          onPressed: () {
+                            // ignore: deprecated_member_use
+                            launch(
+                                "https://www.instagram.com/lapasticceriadilucre/");
+                          },
                         ),
-                        Image.asset(
-                          "assets/images/whatsapp.gif",
-                          width: 40,
+                        IconButton(
+                          icon: Image.asset(
+                            "assets/images/whatsapp.gif",
+                          ),
+                          iconSize: 40,
+                          onPressed: () {
+                            // ignore: deprecated_member_use
+                            launch(
+                                "https://l.instagram.com/?u=https%3A%2F%2Fwa.me%2Fmessage%2FZBYOJH7IALOZJ1&e=ATNOBTVSZsEEfKXc6WQH3AJwGyUdHbDNa3jKUAQQO8FvIp1tT7R0-WNiQuq9QJS1lxoA8YFqhymZyTBM7EjImQ&s=1");
+                          },
                         ),
-                        Image.asset(
-                          "assets/images/facebook.gif",
-                          width: 40,
-                        )
+                        IconButton(
+                          icon: Image.asset(
+                            "assets/images/facebook.gif",
+                          ),
+                          iconSize: 40,
+                          onPressed: () {
+                            // ignore: deprecated_member_use
+                            launch(
+                                "https://web.facebook.com/Lapasticceriadilucre");
+                          },
+                        ),
                       ],
                     ),
                   ),
