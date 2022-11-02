@@ -1,7 +1,23 @@
-// child: Column(
+// body: SingleChildScrollView(
+//         child: Center(
+//             child: Column(
 //           children: [
+//             // ignore: avoid_unnecessary_containers
+//             Container(
+//                 child: Padding(
+//               padding: const EdgeInsets.only(top: 40, left: 16, right: 16),
+//               child: CupertinoSearchTextField(
+//                 borderRadius: BorderRadius.circular(20),
+//               ),
+//             )),
+//             const Padding(
+//               padding: EdgeInsets.only(top: 8),
+//               child: Text("Mas popular ",
+//                   textAlign: TextAlign.left,
+//                   style: TextStyle(fontFamily: "RSV", fontSize: 30)),
+//             ),
 //             Padding(
-//               padding: const EdgeInsets.only(top: 80, right: 20, left: 20),
+//               padding: const EdgeInsets.only(top: 12, right: 20, left: 20),
 //               child: CarouselSlider(
 //                 options: CarouselOptions(
 //                   height: 200,
@@ -24,9 +40,9 @@
 //                       return Container(
 //                           width: MediaQuery.of(context).size.width,
 //                           margin: EdgeInsets.symmetric(horizontal: 5.0),
-//                           decoration: BoxDecoration(color: Colors.amber),
+//                           decoration: BoxDecoration(color: Colors.lightBlue),
 //                           child: Text(
-//                             'text $i',
+//                             'Hola profe $i',
 //                             style: TextStyle(fontSize: 16.0),
 //                           ));
 //                     },
@@ -36,93 +52,19 @@
 //             ),
 //             const Padding(
 //               padding: EdgeInsets.only(top: 16),
-//               child: Text("Elije que quieres pedir"),
+//               child: Text("Elije que quieres pedir",
+//                   textAlign: TextAlign.center,
+//                   style: TextStyle(fontFamily: "RSV", fontSize: 30)),
 //             ),
 //             Padding(
-//               padding: const EdgeInsets.only(top: 16, left: 16, right: 16),
-//               child: Row(
-//                 children: [
-//                   Column(
-//                     children: [
-//                       Padding(
-//                         padding: const EdgeInsets.only(right: 8),
-//                         child: Container(
-//                           child: Image.asset('assets/images/cake.png'),
-//                           height: 100,
-//                           color: Color(0xFF92CAE2),
-//                         ),
-//                       ),
-//                       //Text(''),
-//                     ],
-//                   ),
-//                   Column(
-//                     children: [
-//                       Padding(
-//                         padding: const EdgeInsets.only(right: 8),
-//                         child: Container(
-//                           child: Image.asset('assets/images/cupcake.png'),
-//                           height: 100,
-//                           color: Color(0xFF92CAE2),
-//                         ),
-//                       ),
-//                       //Text(''),
-//                     ],
-//                   ),
-//                   Column(
-//                     children: [
-//                       Container(
-//                         child: Image.asset('assets/images/desing.png'),
-//                         height: 100,
-//                         color: Color(0xFF92CAE2),
-//                       ),
-//                       //Text(''),
-//                     ],
-//                   )
-//                 ],
+//               padding: const EdgeInsets.only(top: 16, left: 8, right: 8),
+//               child: Container(
+//                 color: Colors.transparent,
+//                 width: size.width,
+//                 height: 280,
+//                 child: const Categories(),
 //               ),
 //             ),
-//             Padding(
-//               padding: const EdgeInsets.only(top: 8, left: 16, right: 16),
-//               child: Row(
-//                 children: [
-//                   Column(
-//                     children: [
-//                       Padding(
-//                         padding: const EdgeInsets.only(right: 8),
-//                         child: Container(
-//                           child: Image.asset('assets/images/cokies.png'),
-//                           height: 100,
-//                           color: Color(0xFF92CAE2),
-//                         ),
-//                       ),
-//                       //Text(''),
-//                     ],
-//                   ),
-//                   Column(
-//                     children: [
-//                       Padding(
-//                         padding: const EdgeInsets.only(right: 8),
-//                         child: Container(
-//                           child: Image.asset('assets/images/candies.png'),
-//                           height: 100,
-//                           color: Color(0xFF92CAE2),
-//                         ),
-//                       ),
-//                       //Text(''),
-//                     ],
-//                   ),
-//                   Column(
-//                     children: [
-//                       Container(
-//                         child: Image.asset('assets/images/celebration.png'),
-//                         height: 100,
-//                         color: Color(0xFF92CAE2),
-//                       ),
-//                       //Text(''),
-//                     ],
-//                   )
-//                 ],
-//               ),
-//             )
 //           ],
 //         )),
+//       ),
