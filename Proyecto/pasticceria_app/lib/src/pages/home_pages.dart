@@ -72,14 +72,15 @@ class _HomePaggesState extends State<HomePagges> {
               padding: EdgeInsets.only(top: 16),
               child: Text("Elije que quieres pedir",
                   textAlign: TextAlign.center,
-                  style: TextStyle(fontFamily: "RSV", fontSize: 30)),
+                  style: TextStyle(fontFamily: "RSV", fontSize: 22)),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 16, left: 8, right: 8),
+              // padding: const EdgeInsets.only(top: 16, left: 8, right: 8),
+              padding: const EdgeInsets.all(0),
               child: Container(
                 color: Colors.transparent,
                 width: size.width,
-                height: 280,
+                height: 340,
                 child: const Categories(),
               ),
             ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pasticceria_app/src/pages/googleMaps.dart';
 
 import '../pages/home_pages.dart';
 import '../pages/setting_pages.dart';
@@ -18,6 +19,7 @@ class _MenuRoutesState extends State<MenuRoutes> {
     List<Widget> myList = [
       const HomePagges(),
       const SettingsPages(),
+      // const MapPages(),
       const ProfilePages(),
     ];
     return myList[widget.index];

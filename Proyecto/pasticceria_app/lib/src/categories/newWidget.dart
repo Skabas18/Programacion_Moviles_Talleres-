@@ -3,8 +3,13 @@ import 'package:pasticceria_app/src/categories/menuIcons.dart';
 
 class newWidget extends StatelessWidget {
   final VoidCallback callback;
+
   final Widget icon;
-  const newWidget({super.key, required this.callback, required this.icon});
+  const newWidget({
+    super.key,
+    required this.callback,
+    required this.icon,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +37,7 @@ class newWidget extends StatelessWidget {
                 ),
               ),
             ],
-          )
+          ),
         ],
       ),
     );

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pasticceria_app/src/categories/newWidget.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:pasticceria_app/src/pages/registro_pages.dart';
 
 class Categories extends StatefulWidget {
   const Categories({super.key});
@@ -21,44 +22,48 @@ class _CategoriesState extends State<Categories> {
         crossAxisCount: 3,
         children: <Widget>[
           newWidget(
-              callback: () {},
-              icon: Image.asset(
-                "assets/images/cake.png",
-                width: 50,
-              )),
+            callback: () {
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => const RegistroPage()));
+            },
+            icon: Image.asset(
+              "assets/images/cake.png",
+              width: 40,
+            ),
+          ),
           newWidget(
             callback: () {},
             icon: Image.asset(
               "assets/images/cupcake.png",
-              width: 50,
+              width: 40,
             ),
           ),
           newWidget(
             callback: () {},
             icon: Image.asset(
               "assets/images/desing.png",
-              width: 50,
+              width: 40,
             ),
           ),
           newWidget(
             callback: () {},
             icon: Image.asset(
               "assets/images/cokies.png",
-              width: 50,
+              width: 40,
             ),
           ),
           newWidget(
             callback: () {},
             icon: Image.asset(
               "assets/images/candies.png",
-              width: 50,
+              width: 40,
             ),
           ),
           newWidget(
             callback: () {},
             icon: Image.asset(
               "assets/images/celebration.png",
-              width: 50,
+              width: 40,
             ),
           ),
         ],
