@@ -18,8 +18,8 @@ class _MenuRoutesState extends State<MenuRoutes> {
   Widget build(BuildContext context) {
     List<Widget> myList = [
       const HomePagges(),
-      const SettingsPages(),
-      // const MapPages(),
+      // const SettingsPages(),
+      const MapPages(),
       const ProfilePages(),
     ];
     return myList[widget.index];

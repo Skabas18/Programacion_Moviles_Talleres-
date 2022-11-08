@@ -1,9 +1,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.pasticceria_app">
+<uses-permission android:name="android.permission.INTERNET"/>
+
    <application
         android:label="pasticceria_app"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
+<meta-data android:name="com.google.android.geo.API_KEY"
+               android:value="AIzaSyDUVzqFYAJPNuBDzXKSZ8zHjKi2etMhqvk"/>
+
         <activity
             android:name=".MainActivity"
             android:exported="true"
