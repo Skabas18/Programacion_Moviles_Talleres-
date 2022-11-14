@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pasticceria_app/src/categories/newWidget.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:pasticceria_app/src/pages/registro_pages.dart';
+import 'package:pasticceria_app/src/pages/options_pages.dart';
 
 class Categories extends StatefulWidget {
   const Categories({super.key});
@@ -23,8 +22,8 @@ class _CategoriesState extends State<Categories> {
         children: <Widget>[
           newWidget(
             callback: () {
-              Navigator.of(context).push(MaterialPageRoute(
-                  builder: (context) => const RegistroPage()));
+              Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => const OptionsList()));
             },
             icon: Image.asset(
               "assets/images/cake.png",

@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:pasticceria_app/src/pages/options_pages.dart';
 import '../pages/Inicio_pages.dart';
 import '../pages/login_pages.dart';
 import '../pages/menu_pages.dart';
@@ -11,4 +12,5 @@ final routes = <String, WidgetBuilder>{
   "Login": (BuildContext context) => LoginPage(),
   "Restore": (BuildContext context) => RestorePage(),
   "Registro": (BuildContext context) => RegistroPage(),
+  "Listado": (BuildContext context) => OptionsList(),
 };
