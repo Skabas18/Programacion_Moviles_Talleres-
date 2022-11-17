@@ -46,7 +46,7 @@ class _RestorePageState extends State<RestorePage> {
                     ),
                   ],
                 ),
-              )
+              ),
             ],
           ),
         ),

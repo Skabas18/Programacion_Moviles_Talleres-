@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:pasticceria_app/src/widgets/back.dart';
@@ -10,62 +12,62 @@ class OptionsList extends StatefulWidget {
 }
 
 class _OptionsListState extends State<OptionsList> {
+  List<PickedFile> images = [];
   ImagePicker imagePicker = ImagePicker();
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        body: Center(
-          child: Column(
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(16),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  // crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        Container(
-                          width: 60,
-                          padding: const EdgeInsets.symmetric(horizontal: 20),
-                          child: BackButtonWidget(
-                            callback: () {
-                              Navigator.pop(context);
-                            },
-                          ),
-                        ),
-                      ],
-                    ),
-
-                    // ignore: avoid_unnecessary_containers
-                    Container(
-                      child: Image.asset(
-                        'assets/images/logo.png',
-                        width: 100,
-                      ),
-                    ),
-                  ],
+    Size size = MediaQuery.of(context).size;
+    return Scaffold(
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Container(
+                  width: 60,
+                  color: Colors.amber,
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  child: BackButtonWidget(
+                    callback: () {
+                      Navigator.pop(context);
+                    },
+                  ),
                 ),
-              ),
-              TextButton(onPressed: () {}, child: Text("Hola")),
-            ],
-          ),
+                Container(
+                  child: Image.asset(
+                    'assets/images/logo.png',
+                    width: 100,
+                  ),
+                ),
+              ],
+            ),
+            Container(
+              color: Colors.blueAccent,
+              width: 300,
+              height: 300,
+            ),
+            ListView.builder(
+              //padding: EdgeInsets.all(10),
+              shrinkWrap: true,
+              itemCount: images.length,
+              itemBuilder: (BuildContext context, int index) {
+                return Image.file(
+                  File(images[index].path),
+                  width: 80,
+                  height: 150,
+                );
+              },
+            ),
+          ],
         ),
-        floatingActionButton: FloatingActionButton(
-            child: Icon(Icons.add), onPressed: _optionsDialogBox),
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.add),
+        onPressed: _optionsDialogBox,
       ),
     );
-  }
-
-  void _openCamera() async {
-    XFile? image = await imagePicker.pickImage(source: ImageSource.camera);
-  }
-
-  void _openGallery() async {
-    XFile? image = await imagePicker.pickImage(source: ImageSource.gallery);
   }
 
   Future<void> _optionsDialogBox() {
@@ -90,23 +92,30 @@ class _OptionsListState extends State<OptionsList> {
                   Padding(
                     padding: EdgeInsets.all(8.0),
                   ),
-                  // GestureDetector(
-                  //   child: new Text('camera: cámara'),
-                  //   onTap: () async {
-                  //     String picturePath = await Navigator.of(context).push(
-                  //         MaterialPageRoute(
-                  //             builder: (context) => CameraScreen()));
-                  //     Navigator.pop(context);
-                  //     print(picturePath);
-                  //     setState(() {
-                  //       images.add(PickedFile(picturePath));
-                  //     });
-                  //   },
-                  // ),
                 ],
               ),
             ),
           );
         });
+  }
+
+  void _openCamera() async {
+    PickedFile? picture = await imagePicker.getImage(
+      source: ImageSource.camera,
+    );
+    Navigator.pop(context);
+    setState(() {
+      images.add(picture!);
+    });
+  }
+
+  void _openGallery() async {
+    PickedFile? picture = await imagePicker.getImage(
+      source: ImageSource.gallery,
+    );
+    Navigator.pop(context);
+    setState(() {
+      images.add(picture!);
+    });
   }
 }

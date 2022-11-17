@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:pasticceria_app/src/pages/carousel.dart';
 import '../categories/categories.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter_swiper/flutter_swiper.dart';
 
 class HomePagges extends StatefulWidget {
   const HomePagges({super.key});
@@ -36,37 +38,7 @@ class _HomePaggesState extends State<HomePagges> {
             ),
             Padding(
               padding: const EdgeInsets.only(top: 12, right: 20, left: 20),
-              child: CarouselSlider(
-                options: CarouselOptions(
-                  height: 200,
-                  aspectRatio: 16 / 9,
-                  viewportFraction: 0.8,
-                  initialPage: 0,
-                  enableInfiniteScroll: true,
-                  reverse: false,
-                  autoPlay: true,
-                  autoPlayInterval: Duration(seconds: 3),
-                  autoPlayAnimationDuration: Duration(milliseconds: 800),
-                  autoPlayCurve: Curves.fastOutSlowIn,
-                  enlargeCenterPage: true,
-                  //onPageChanged: callbackFunction,
-                  scrollDirection: Axis.horizontal,
-                ),
-                items: [1, 2, 3, 4, 5].map((i) {
-                  return Builder(
-                    builder: (BuildContext context) {
-                      return Container(
-                          width: MediaQuery.of(context).size.width,
-                          margin: EdgeInsets.symmetric(horizontal: 5.0),
-                          decoration: BoxDecoration(color: Colors.lightBlue),
-                          child: Text(
-                            'Hola profe $i',
-                            style: TextStyle(fontSize: 16.0),
-                          ));
-                    },
-                  );
-                }).toList(),
-              ),
+              child: CarouselSebastian(),
             ),
             const Padding(
               padding: EdgeInsets.only(top: 16),
