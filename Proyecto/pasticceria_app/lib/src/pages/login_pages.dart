@@ -165,8 +165,7 @@ class _LoginPageState extends State<LoginPage> {
                     iconSize: 40,
                     onPressed: () {
                       // ignore: deprecated_member_use
-                      launch(
-                          "https://l.instagram.com/?u=https%3A%2F%2Fwa.me%2Fmessage%2FZBYOJH7IALOZJ1&e=ATNOBTVSZsEEfKXc6WQH3AJwGyUdHbDNa3jKUAQQO8FvIp1tT7R0-WNiQuq9QJS1lxoA8YFqhymZyTBM7EjImQ&s=1");
+                      launch("https://wa.me/573147099425");
                     },
                   ),
                   IconButton(
