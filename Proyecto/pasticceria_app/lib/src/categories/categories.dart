@@ -31,35 +31,50 @@ class _CategoriesState extends State<Categories> {
             ),
           ),
           newWidget(
-            callback: () {},
+            callback: () {
+              Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => const OptionsList()));
+            },
             icon: Image.asset(
               "assets/images/cupcake.png",
               width: 40,
             ),
           ),
           newWidget(
-            callback: () {},
+            callback: () {
+              Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => const OptionsList()));
+            },
             icon: Image.asset(
               "assets/images/desing.png",
               width: 40,
             ),
           ),
           newWidget(
-            callback: () {},
+            callback: () {
+              Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => const OptionsList()));
+            },
             icon: Image.asset(
               "assets/images/cokies.png",
               width: 40,
             ),
           ),
           newWidget(
-            callback: () {},
+            callback: () {
+              Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => const OptionsList()));
+            },
             icon: Image.asset(
               "assets/images/candies.png",
               width: 40,
             ),
           ),
           newWidget(
-            callback: () {},
+            callback: () {
+              Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => const OptionsList()));
+            },
             icon: Image.asset(
               "assets/images/celebration.png",
               width: 40,
