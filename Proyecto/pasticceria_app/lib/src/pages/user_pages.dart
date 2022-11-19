@@ -103,7 +103,7 @@ class _ProfilePagesState extends State<ProfilePages> {
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(16),
                       border: Border.all(color: Colors.black, width: 2),
-                      color: Colors.white),
+                      color: Colors.blue.shade200),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: const [
@@ -165,7 +165,7 @@ class _ProfilePagesState extends State<ProfilePages> {
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(16),
                       border: Border.all(color: Colors.black, width: 2),
-                      color: Colors.white),
+                      color: Colors.blue.shade200),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: const [

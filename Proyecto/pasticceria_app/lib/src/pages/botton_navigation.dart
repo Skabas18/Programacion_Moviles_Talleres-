@@ -29,7 +29,8 @@ class _BNavigatorState extends State<BNavigator> {
       type: BottomNavigationBarType.fixed,
       items: const [
         BottomNavigationBarItem(icon: Icon(Icons.home), label: "Inicio"),
-        BottomNavigationBarItem(icon: Icon(Icons.menu), label: "Menu"),
+        BottomNavigationBarItem(
+            icon: Icon(Icons.list_alt_rounded), label: "Nosotros"),
         BottomNavigationBarItem(icon: Icon(Icons.person), label: "Perfil"),
       ],
     );

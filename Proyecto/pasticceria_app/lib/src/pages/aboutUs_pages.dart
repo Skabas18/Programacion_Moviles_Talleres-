@@ -30,24 +30,6 @@ class _AboutUsState extends State<AboutUs> {
                   style: TextStyle(fontFamily: "PCRegular", fontSize: 40)),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 32),
-              child: Container(
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(16),
-                    border: Border.all(color: Colors.black, width: 2),
-                    color: const Color(0xff92CAE2)),
-                width: size.width * 0.8,
-                child: TextButton(
-                    onPressed: () {},
-                    child: const Text(
-                      "Reservas",
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                          fontFamily: "RSV", fontSize: 30, color: Colors.white),
-                    )),
-              ),
-            ),
-            Padding(
               padding: const EdgeInsets.only(top: 16),
               child: Container(
                 decoration: BoxDecoration(
@@ -67,6 +49,24 @@ class _AboutUsState extends State<AboutUs> {
                           fontFamily: "RSV",
                           fontSize: 30,
                           color: Color(0xff92CAE2)),
+                    )),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 16),
+              child: Container(
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(16),
+                    border: Border.all(color: Colors.black, width: 2),
+                    color: const Color(0xff92CAE2)),
+                width: size.width * 0.8,
+                child: TextButton(
+                    onPressed: () {},
+                    child: const Text(
+                      "Reservas",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          fontFamily: "RSV", fontSize: 30, color: Colors.white),
                     )),
               ),
             ),
