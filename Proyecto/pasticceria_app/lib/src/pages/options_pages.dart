@@ -171,14 +171,14 @@ class _OptionsListState extends State<OptionsList> {
               child: ListBody(
                 children: <Widget>[
                   GestureDetector(
-                    child: Text('image_picker: Cámara'),
+                    child: Text('Seleccionar Camara'),
                     onTap: _openCamera,
                   ),
                   Padding(
                     padding: EdgeInsets.all(8.0),
                   ),
                   GestureDetector(
-                    child: new Text('image_picker: Galería'),
+                    child: new Text('Seleccionar Galería'),
                     onTap: _openGallery,
                   ),
                   Padding(
