@@ -22,12 +22,14 @@ class _OptionsListState extends State<OptionsList> {
       body: SingleChildScrollView(
         child: Column(
           children: [
+            const SizedBox(
+              height: 50,
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Container(
                   width: 60,
-                  color: Colors.amber,
                   padding: const EdgeInsets.symmetric(horizontal: 20),
                   child: BackButtonWidget(
                     callback: () {
@@ -35,18 +37,108 @@ class _OptionsListState extends State<OptionsList> {
                     },
                   ),
                 ),
-                Container(
-                  child: Image.asset(
-                    'assets/images/logo.png',
-                    width: 100,
+                Padding(
+                  padding: const EdgeInsets.only(
+                    right: 10,
+                  ),
+                  child: Container(
+                    child: Image.asset(
+                      'assets/images/logo.png',
+                      width: 110,
+                    ),
                   ),
                 ),
               ],
             ),
+            const SizedBox(
+              height: 50,
+            ),
+            Text(
+              'Arma tu pedido',
+              style: TextStyle(
+                  fontFamily: "PCRegular", fontSize: 60, color: Colors.black),
+            ),
             Container(
-              color: Colors.blueAccent,
-              width: 300,
-              height: 300,
+              child: Form(
+                  child: Column(
+                //crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Container(
+                          decoration: BoxDecoration(
+                              border: Border.all(color: Colors.black)),
+                          width: size.width / 2.5,
+                          child: TextFormField(
+                            textAlign: TextAlign.center,
+                            decoration: const InputDecoration(
+                                hintText: 'Cantidad  personas '),
+                          )),
+                      Container(
+                          decoration: BoxDecoration(
+                              border: Border.all(color: Colors.black)),
+                          width: size.width / 2.5,
+                          child: TextFormField(
+                            textAlign: TextAlign.center,
+                            decoration:
+                                const InputDecoration(hintText: 'Sabor '),
+                          ))
+                    ],
+                  ),
+                  const SizedBox(height: 10),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Container(
+                          decoration: BoxDecoration(
+                              border: Border.all(color: Colors.black)),
+                          width: size.width / 2.5,
+                          child: TextFormField(
+                            textAlign: TextAlign.center,
+                            decoration:
+                                const InputDecoration(hintText: 'Relleno '),
+                          )),
+                      Container(
+                          decoration: BoxDecoration(
+                              border: Border.all(color: Colors.black)),
+                          width: size.width / 2.5,
+                          child: TextFormField(
+                            textAlign: TextAlign.center,
+                            decoration: const InputDecoration(
+                                hintText: 'Fecha del evento '),
+                          ))
+                    ],
+                  ),
+                  const SizedBox(height: 10),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Container(
+                          decoration: BoxDecoration(
+                              border: Border.all(color: Colors.black)),
+                          width: size.width / 2.5,
+                          child: TextFormField(
+                            textAlign: TextAlign.center,
+                            decoration: const InputDecoration(
+                                hintText: '¿Tienes diseño? '),
+                          )),
+                      Container(
+                          decoration: BoxDecoration(
+                              border: Border.all(color: Colors.black)),
+                          width: size.width / 2.5,
+                          child: TextFormField(
+                            textAlign: TextAlign.center,
+                            decoration: const InputDecoration(
+                                hintText: 'Deseas algo mas '),
+                          ))
+                    ],
+                  ),
+                ],
+              )),
+              //color: Colors.blueAccent,
+              //width: 300,
+              //height: 300,
             ),
             ListView.builder(
               //padding: EdgeInsets.all(10),
