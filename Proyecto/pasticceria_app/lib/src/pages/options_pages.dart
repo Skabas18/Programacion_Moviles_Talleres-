@@ -53,7 +53,7 @@ class _OptionsListState extends State<OptionsList> {
             const SizedBox(
               height: 50,
             ),
-            Text(
+            const Text(
               'Arma tu pedido',
               style: TextStyle(
                   fontFamily: "PCRegular", fontSize: 60, color: Colors.black),
@@ -156,8 +156,8 @@ class _OptionsListState extends State<OptionsList> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.add),
         onPressed: _optionsDialogBox,
+        child: const Icon(Icons.add),
       ),
     );
   }
@@ -171,17 +171,17 @@ class _OptionsListState extends State<OptionsList> {
               child: ListBody(
                 children: <Widget>[
                   GestureDetector(
-                    child: Text('Seleccionar Camara'),
                     onTap: _openCamera,
+                    child: const Text('Seleccionar Camara'),
                   ),
-                  Padding(
+                  const Padding(
                     padding: EdgeInsets.all(8.0),
                   ),
                   GestureDetector(
-                    child: new Text('Seleccionar Galería'),
                     onTap: _openGallery,
+                    child: const Text('Seleccionar Galería'),
                   ),
-                  Padding(
+                  const Padding(
                     padding: EdgeInsets.all(8.0),
                   ),
                 ],
