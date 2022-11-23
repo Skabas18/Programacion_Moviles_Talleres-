@@ -66,6 +66,7 @@ class _LoginPageState extends State<LoginPage> {
               Padding(
                 padding: const EdgeInsets.only(top: 64, left: 32, right: 32),
                 child: Form(
+                   key: formKey,
                     child: Column(
                   children: <Widget>[
                     TextFormField(
@@ -76,7 +77,7 @@ class _LoginPageState extends State<LoginPage> {
                           icon: Icon(Icons.person)),
                       style: const TextStyle(fontSize: 13),
                       validator: (value) {
-                        if (value!.isEmpty) {
+                        if (value!.isNotEmpty) {
                           return 'Please enter some text';
                         }
                       },
